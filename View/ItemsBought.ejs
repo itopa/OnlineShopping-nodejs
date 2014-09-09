@@ -1,0 +1,16 @@
+<html>
+<body>
+	Displaying products you previously bought:
+	<table>
+
+	<%if(products){%>
+	<%for (i=0;i<products.length;i++){%>
+	<tr>
+	<td><%=products[i]%></td>
+	
+	</tr>
+	<%}%>
+	<%}%>
+	</table>
+</body>
+</html>

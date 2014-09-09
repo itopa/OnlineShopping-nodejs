@@ -1,0 +1,23 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<%if(str){%>
+		<%=str%>
+		<%}%>
+		<%if(!str){%>
+		Welcome user.
+		<br/>Please enter your details
+		<%}%>
+		<form action="/logdetails" method="post">
+		Name:<input type="text" length=100px name="name">
+		LastName:<input type="text" length=100px name="lastname">
+		Password<input type="password" length=100px name="password">
+		Password<input type="password" length=100px name="password1">
+		EmailId:<input type="text" length=100px name="email">
+		<input type="submit" value="Signup"> 
+		</form>
+	</body>
+
+</html>

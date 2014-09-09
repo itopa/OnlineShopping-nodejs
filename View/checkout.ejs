@@ -1,0 +1,26 @@
+<html>
+<head>
+  AMAZON 
+</head>
+<body>
+  <br/>
+  <%if(str)%>
+  <%= str%>
+	<form method="post" action="/validateCard">
+		<input type="hidden" value=<%= EmailId%> name="EmailId">
+  
+    <input type="text" name="creditcard">
+    <input type="submit" value="Pay">
+
+<br/>
+     <input type="button" name="Sign Out" length ="100px" action="signout" value="sign out" onclick = "logout()">
+    
+
+<script type="text/javascript">
+    function logout(){
+        window.location.replace("/index");
+    }
+</script>
+   
+  </body>
+</html>

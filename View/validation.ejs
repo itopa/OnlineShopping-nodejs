@@ -1,0 +1,21 @@
+<html>
+<head>
+  AMAZON 
+</head>
+<body>
+  Validation Success!
+  <%var link="/continueshopping?"+EmailId%>
+  <br/>
+  <a href=<%= link%>>Do you want to continue shopping?</a>
+  <br/>
+   <input type="button" name="Sign Out" length ="100px" action="signout" value="sign out" onclick = "logout()">
+    
+
+<script type="text/javascript">
+    function logout(){
+        window.location.replace("/index");
+    }
+</script>
+   
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+  Welcome
+  <br/>AMAZON <%= username%>
+</head>
+<body>
+  <table>
+    <tr>
+    	<p>
+    	<% if(names.length)%>
+      <%{ %>
+      <% for(i=0;i<names.length;i++){%>
+       <% var hlink="/buy?"+names[i]+'&'+username+'&'+EmailId+'&'+productId[i] %>
+    <a href=<%= hlink%>> <%= names[i]%></a>
+      <br/>
+         <% } %>
+      <% }%>
+      <td>
+       <input type="button" name="Sign Out" length ="100px" action="signout" value="sign out" onclick = "logout()">
+        <script type="text/javascript">
+          function logout(){
+          window.location.replace("/index");
+    }
+    </script>
+   </td>
+
+      </p>
+    </tr>
+  </table>
+</body>
+</html>

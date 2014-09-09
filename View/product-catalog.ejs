@@ -1,0 +1,42 @@
+<html>
+<head>
+  
+  <br/>AMAZON
+</head>
+<body>
+    <br>
+    <%if(last_logged){%>
+    <%= last_logged%>
+    <%}%>
+    <% var link="/showcart?"+EmailId%>
+    <br/>
+    <a href=<%= link%>>show my cart</a>
+    <br/>
+    Welcome <input style="background-color:transparent; border: 0px solid; height:20px; width:250px;" type="text" name="username" value=<%= username%>>
+
+    	<p>
+        <%= EmailId%>
+        
+        <br/>
+    	<% if(names.length)%>
+      <%{ %>
+    	<% for(i=0;i<names.length;i++){%>
+      <% var hlink="/products?"+names[i]+"&"+EmailId+"&"+username %>
+    <a href= <%= hlink%>> <%= names[i]%></a>
+    	<br/>
+         <% } %>
+    	<% }%>
+      </p>
+
+    <input type="button" name="Sign Out" length ="100px" action="signout" value="sign out" onclick = "logout()">
+     <%viewlink="/viewPurchasedItems?"+EmailId%>
+        <a href=<%=viewlink%>>View Items You Previously Bought</a>
+
+<script type="text/javascript">
+    function logout(){
+        window.location.replace("/index");
+    }
+
+    </script>
+    </body>
+</html>

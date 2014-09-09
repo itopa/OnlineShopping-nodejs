@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<form action="/validate" method="post">
+<table>
+<tr>
+	
+<td>UserName: </td>
+<td><input type="text" name="username" length="100px" id="name"></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="text" name="password" length="100px" id="password"></td>
+</tr>
+<tr>
+<td><input type="submit" name="login" length="100px" value="login"></td>	
+</tr>
+</table>
+<table>
+<tr><td><font color="yellow" size="15">new users have to sign up first<font></td></tr>
+<tr><td><input type="button" name="Sign UP" lenght ="100px" onclick="signup()"></td></tr>
+
+<script type="text/javascript">
+    function signup(){
+     window.location.replace("/signup");
+    }
+    </script>
+</table>
+</body>
+</html>

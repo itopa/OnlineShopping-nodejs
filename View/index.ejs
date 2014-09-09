@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<%if(str){%>
+<%= str%>
+<%}%>
+
+<table>
+<tr>
+<form method="post" action="/validate">  
+<td>UserName: </td>
+<td><input type="text" name="username" lengh="100px" id="username"></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="text" name="password" lenght="100px" id="password"></td>
+</tr>
+</table>
+<input type="submit" value="login">
+<table>
+  
+<tr><td>new users have to sign up first<font></td></tr>
+
+<tr><td><input type="button" name="Sign UP" lenght ="100px" action="signup" value="sign up" onclick = "signup()"></td></tr>
+
+</table>
+
+<script type="text/javascript">
+    function signup(){
+     window.location.replace("/signup");
+    }
+    </script>
+
+</body>
+</html>

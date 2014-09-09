@@ -1,0 +1,41 @@
+<html>
+<head>
+  
+  <br/>AMAZON
+</head>
+<body>
+  <form action="/AddToCart" method="post">
+    Welcome <input style="background-color:transparent; border: 0px solid; height:20px; width:250px;" type="text" name="username" value=<%= username%>>
+    <input type="hidden" value=<%= EmailId%> name="EmailId">
+    <input type="hidden" value=<%= ProductId%> name="ProductId">
+    	<table><p>
+<tr><td>Product Name:<input type="text" value=<%= names%>   name="ProductName" border="0">     </td>
+      <td>Description:<%= description%></td>
+      <td>Price:<input type="text" value=<%= price%> name="Price" border="0"></td>
+      <%if(qty==0){%>
+<br/>        Sorry the product is Out of stock!!!
+<%}%>
+<% if(qty>0){%>
+      <td> Quantity: <%= qty%>      </td>
+      <td>Enter requireed qty: <input type="text" value=1 name="Quantity"></td>
+      
+      <td><input type="submit" value="add to cart"></td>
+      <%}%>
+    </tr>
+    <tr>
+      <td>
+ <input type="button" name="Sign Out" length ="100px" action="signout" value="sign out" onclick = "logout()">
+    
+
+<script type="text/javascript">
+    function logout(){
+        window.location.replace("/index");
+    }
+</script>
+   
+      </td></tr>
+      </table>
+      
+        </p>
+   </body>
+</html>

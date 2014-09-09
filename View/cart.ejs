@@ -1,0 +1,43 @@
+<html>
+<head>
+  AMAZON 
+</head>
+<body>
+  <br/>
+    Displaying Your cart:
+    <table>
+      <tr><th>SrNo.</th><th>ProductName</th><th>Quantity</th><th>Amount</th></tr>
+     
+      <p>        
+        <%var total=0%>
+        <br/>
+      <% if(productName.length)%>
+      <%{ %>
+      <% for(i=0;i<productName.length;i++){%>
+          <tr> <td><%= i+1%></td><td><%= productName[i]%></td><td><%= quantityBought[i]%></td><td><%= amount[i]%></td>
+            <td><%var ref="/remove?"+EmailId+"&"+productName[i]%>
+              <a href=<%= ref%>>Remove</a></td></tr>
+          <%total+=amount[i]%>
+         <% } %>
+      <% }%>
+      </p>
+      <tr><td></td><td></td><td>Total cost:</td><td><%= total%></td></tr>
+
+
+    <%var checkout="/checkout?"+EmailId%>
+
+<tr><td>    <a href=<%= checkout%>>Proceed to checkout</a>
+</td></tr>
+
+<tr><td> <input type="button" name="Sign Out" length ="100px" action="signout" value="sign out" onclick = "logout()">
+    
+
+<script type="text/javascript">
+    function logout(){
+        window.location.replace("/index");
+    }
+</script>
+   </td></tr>
+    </table>    
+</body>
+</html>
